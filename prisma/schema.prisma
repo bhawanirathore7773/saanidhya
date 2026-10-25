@@ -1,0 +1,315 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  engineType          = "client"
+  moduleFormat        = "cjs"
+  runtime             = "nodejs"
+  importFileExtension = ""
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model SiteSettings {
+  id                     Int   @id @default(1)
+  business_name          String   @default("Saanidhya Events") @db.VarChar(100)
+  tagline                String   @default("Wedding, birthday & celebration decor and event management") @db.VarChar(160)
+  founded_year           Int?  @db.SmallInt
+  price_range            String   @default("₹₹") @db.VarChar(10)
+  phone                  String   @default("") @db.VarChar(20)
+  whatsapp_number        String   @default("") @db.VarChar(20)
+  email                  String   @default("") @db.VarChar(254)
+  address_line           String   @default("") @db.VarChar(200)
+  locality               String   @default("") @db.VarChar(100)
+  city                   String   @default("Jaipur") @db.VarChar(80)
+  state                  String   @default("Rajasthan") @db.VarChar(80)
+  postal_code            String   @default("") @db.VarChar(10)
+  latitude               Decimal?  @db.Decimal(9,6)
+  longitude              Decimal?  @db.Decimal(9,6)
+  service_areas          String   @db.Text
+  opening_hours          String   @default("Mo-Su 09:00-21:00") @db.VarChar(120)
+  google_maps_embed_url  String   @default("") @db.VarChar(600)
+  google_maps_url        String   @default("") @db.VarChar(400)
+  google_business_profile_url String   @default("") @db.VarChar(400)
+  google_review_url      String   @default("") @db.VarChar(400)
+  google_rating          Decimal?  @db.Decimal(2,1)
+  google_review_count    Int?
+  google_site_verification String   @default("") @db.VarChar(100)
+  ga4_measurement_id     String   @default("") @db.VarChar(20)
+  instagram_url          String   @default("") @db.VarChar(200)
+  facebook_url           String   @default("") @db.VarChar(200)
+  youtube_url            String   @default("") @db.VarChar(200)
+  events_completed       Int?
+  years_experience       Int?  @db.SmallInt
+  hero_headline          String   @default("Decor & events that make your big day unforgettable") @db.VarChar(120)
+  hero_subheadline       String   @default("Wedding, birthday, anniversary and every celebration - planned, designed and delivered by one caring team.") @db.VarChar(220)
+  hero_poster            String   @default("") @db.VarChar(255)
+  hero_poster_alt        String   @default("") @db.VarChar(140)
+  hero_video             String   @default("") @db.VarChar(255)
+  whatsapp_message       String   @default("Hi Saanidhya Events, I would like to know more about your decoration and event services.") @db.VarChar(200)
+  lead_notification_emails String   @default("") @db.VarChar(300)
+  about_story            String   @db.LongText
+  about_photo            String   @default("") @db.VarChar(255)
+  about_photo_alt        String   @default("") @db.VarChar(140)
+  default_seo_title      String   @default("") @db.VarChar(60)
+  default_seo_description String   @default("") @db.VarChar(155)
+  schema_show_rating     Boolean   @default(false)
+  default_og_image       String   @default("") @db.VarChar(255)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  @@map("site_settings")
+}
+
+model ContentVersion {
+  id                     Int   @id @default(1)
+  version                Int   @default(1)
+  @@map("content_version")
+}
+
+model AdminUser {
+  id                     Int   @id @default(autoincrement())
+  email                  String   @unique @db.VarChar(190)
+  name                   String   @default("") @db.VarChar(100)
+  password_hash          String   @db.VarChar(100)
+  is_active              Boolean   @default(true)
+  is_superuser           Boolean   @default(false)
+  last_login_at          DateTime?  @db.DateTime(3)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  @@map("admin_users")
+}
+
+model EventCategory {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  slug                   String   @unique @db.VarChar(90)
+  seo_title              String   @default("") @db.VarChar(60)
+  seo_description        String   @default("") @db.VarChar(155)
+  name                   String   @unique @db.VarChar(80)
+  short_description      String   @db.VarChar(200)
+  description            String   @db.LongText
+  icon                   String   @default("") @db.VarChar(40)
+  cover_image            String   @default("") @db.VarChar(255)
+  cover_alt              String   @default("") @db.VarChar(140)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  services               Service[]
+  faqs                   Faq[]
+  projects               Project[]
+  gallery_images         GalleryImage[]
+  videos                 Video[]
+  blog_posts             BlogPost[]
+  testimonials           Testimonial[]
+  leads                  Lead[]
+  @@index([is_published, ordering])
+  @@map("event_categories")
+}
+
+model Service {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  slug                   String   @unique @db.VarChar(90)
+  seo_title              String   @default("") @db.VarChar(60)
+  seo_description        String   @default("") @db.VarChar(155)
+  category_id            Int
+  title                  String   @db.VarChar(120)
+  city                   String   @default("") @db.VarChar(80)
+  short_description      String   @db.VarChar(220)
+  description            String   @db.LongText
+  highlights             String   @db.Text
+  focus_keyword          String   @default("") @db.VarChar(120)
+  starting_price         Int?
+  price_note             String   @default("") @db.VarChar(120)
+  show_in_packages       Boolean   @default(false)
+  is_featured            Boolean   @default(false)
+  cover_image            String   @default("") @db.VarChar(255)
+  cover_alt              String   @default("") @db.VarChar(140)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  category               EventCategory @relation(fields: [category_id], references: [id], onDelete: Restrict)
+  faqs                   Faq[]
+  projects               Project[]
+  blog_posts             BlogPost[]
+  leads                  Lead[]
+  @@index([is_published, ordering])
+  @@index([is_published, is_featured])
+  @@map("services")
+}
+
+model Faq {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  question               String   @db.VarChar(250)
+  answer                 String   @db.Text
+  category_id            Int?
+  service_id             Int?
+  show_on_home           Boolean   @default(false)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  category               EventCategory? @relation(fields: [category_id], references: [id], onDelete: Cascade)
+  service                Service? @relation(fields: [service_id], references: [id], onDelete: Cascade)
+  @@index([is_published, ordering])
+  @@map("faqs")
+}
+
+model Project {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  slug                   String   @unique @db.VarChar(90)
+  seo_title              String   @default("") @db.VarChar(60)
+  seo_description        String   @default("") @db.VarChar(155)
+  title                  String   @db.VarChar(140)
+  event_category_id      Int
+  service_id             Int?
+  short_description      String   @db.VarChar(220)
+  description            String   @db.LongText
+  venue                  String   @default("") @db.VarChar(150)
+  city                   String   @default("") @db.VarChar(80)
+  event_date             DateTime?  @db.Date
+  guest_count            Int?
+  is_featured            Boolean   @default(false)
+  cover_image            String   @db.VarChar(255)
+  cover_alt              String   @default("") @db.VarChar(140)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  event_category         EventCategory @relation(fields: [event_category_id], references: [id], onDelete: Restrict)
+  service                Service? @relation(fields: [service_id], references: [id], onDelete: SetNull)
+  images                 GalleryImage[]
+  videos                 Video[]
+  @@index([is_published, ordering])
+  @@index([is_published, is_featured])
+  @@index([event_category_id, is_published])
+  @@map("projects")
+}
+
+model GalleryImage {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  project_id             Int?
+  event_category_id      Int?
+  image                  String   @db.VarChar(255)
+  width                  Int?
+  height                 Int?
+  alt_text               String   @default("") @db.VarChar(140)
+  caption                String   @default("") @db.VarChar(200)
+  is_featured            Boolean   @default(false)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  project                Project? @relation(fields: [project_id], references: [id], onDelete: Cascade)
+  event_category         EventCategory? @relation(fields: [event_category_id], references: [id], onDelete: SetNull)
+  @@index([is_published, ordering])
+  @@index([is_published, event_category_id, ordering])
+  @@index([is_published, is_featured])
+  @@index([is_published, is_featured(sort: Desc), ordering, created_at(sort: Desc)])
+  @@map("gallery_images")
+}
+
+model Video {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  slug                   String   @unique @db.VarChar(90)
+  seo_title              String   @default("") @db.VarChar(60)
+  seo_description        String   @default("") @db.VarChar(155)
+  title                  String   @db.VarChar(140)
+  youtube_id             String   @db.VarChar(200)
+  description            String   @db.Text
+  event_category_id      Int?
+  project_id             Int?
+  custom_thumbnail       String   @default("") @db.VarChar(255)
+  duration_seconds       Int?
+  is_featured            Boolean   @default(false)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  event_category         EventCategory? @relation(fields: [event_category_id], references: [id], onDelete: SetNull)
+  project                Project? @relation(fields: [project_id], references: [id], onDelete: SetNull)
+  @@index([is_published, ordering])
+  @@index([is_published, is_featured])
+  @@map("videos")
+}
+
+model BlogPost {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  slug                   String   @unique @db.VarChar(90)
+  seo_title              String   @default("") @db.VarChar(60)
+  seo_description        String   @default("") @db.VarChar(155)
+  title                  String   @db.VarChar(150)
+  excerpt                String   @db.VarChar(300)
+  body                   String   @db.LongText
+  author_name            String   @default("Team Saanidhya") @db.VarChar(80)
+  published_at           DateTime   @default(now()) @db.DateTime(3)
+  focus_keyword          String   @default("") @db.VarChar(120)
+  search_intent          String   @default("informational") @db.VarChar(20)
+  event_category_id      Int?
+  related_service_id     Int?
+  cover_image            String   @default("") @db.VarChar(255)
+  cover_alt              String   @default("") @db.VarChar(140)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  event_category         EventCategory? @relation(fields: [event_category_id], references: [id], onDelete: SetNull)
+  related_service        Service? @relation(fields: [related_service_id], references: [id], onDelete: SetNull)
+  @@index([is_published, published_at(sort: Desc)])
+  @@map("blog_posts")
+}
+
+model Testimonial {
+  id                     Int   @id @default(autoincrement())
+  is_published           Boolean   @default(true)
+  ordering               Int   @default(0)
+  client_name            String   @db.VarChar(100)
+  client_title           String   @default("") @db.VarChar(120)
+  event_category_id      Int?
+  city                   String   @default("") @db.VarChar(80)
+  event_date             DateTime?  @db.Date
+  rating                 Int   @default(5)
+  text                   String   @db.Text
+  photo                  String   @default("") @db.VarChar(255)
+  source                 String   @default("direct") @db.VarChar(20)
+  source_url             String   @default("") @db.VarChar(200)
+  is_featured            Boolean   @default(false)
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  event_category         EventCategory? @relation(fields: [event_category_id], references: [id], onDelete: SetNull)
+  @@index([is_published, ordering])
+  @@index([is_published, is_featured])
+  @@map("testimonials")
+}
+
+model Lead {
+  id                     Int   @id @default(autoincrement())
+  name                   String   @db.VarChar(100)
+  phone                  String   @db.VarChar(20)
+  event_type_id          Int?
+  service_id             Int?
+  event_date             DateTime?  @db.Date
+  city                   String   @default("") @db.VarChar(80)
+  budget                 String   @default("") @db.VarChar(20)
+  status                 String   @default("new") @db.VarChar(20)
+  notes                  String   @db.Text
+  source_url             String   @default("") @db.VarChar(500)
+  utm_source             String   @default("") @db.VarChar(100)
+  utm_medium             String   @default("") @db.VarChar(100)
+  utm_campaign           String   @default("") @db.VarChar(100)
+  ip_address             String?  @db.VarChar(45)
+  user_agent             String   @default("") @db.VarChar(300)
+  email_sent             Boolean   @default(false)
+  whatsapp_sent          Boolean   @default(false)
+  notify_error           String   @db.Text
+  created_at             DateTime   @default(now()) @db.DateTime(3)
+  updated_at             DateTime   @updatedAt @db.DateTime(3)
+  event_type             EventCategory? @relation(fields: [event_type_id], references: [id], onDelete: SetNull)
+  service                Service? @relation(fields: [service_id], references: [id], onDelete: SetNull)
+  @@index([status, created_at(sort: Desc)])
+  @@index([ip_address, created_at(sort: Desc)])
+  @@index([phone, created_at(sort: Desc)])
+  @@map("leads")
+}
