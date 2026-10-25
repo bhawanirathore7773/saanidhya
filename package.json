@@ -17,7 +17,8 @@
     "seed": "node dist/scripts/seed.js",
     "create-admin": "node dist/scripts/create-admin.js",
     "regenerate-images": "node dist/scripts/regenerate-images.js",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "healthcheck": "node scripts/healthcheck.js"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",

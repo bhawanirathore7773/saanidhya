@@ -1,14 +1,34 @@
 # Saanidhya Events website (NestJS + Prisma + MySQL)
 
-Wedding, event and decoration company website: fast server-rendered pages, photo gallery, videos, blog, FAQs, quote/enquiry form with email + WhatsApp alerts, and a full admin panel. Built to run on **Hostinger Node.js hosting** with a MySQL database.
+Wedding, event and decoration company website: fast server-rendered pages, photo gallery, videos, blog, FAQs, quote/enquiry form, and an admin panel. Built for Hostinger Node.js hosting with a MySQL/MariaDB database.
 
-* **Deploy:** `docs/HOSTINGER_DEPLOY.md` (step by step, no command line needed)
-* **Owner's manual:** `docs/ADMIN_GUIDE.md`
-* **Developers:** `docs/DEVELOPMENT.md`
-* Environment variables: `.env.example`
-* Database tables: `database/schema.sql` (import in phpMyAdmin)
-* What changed from the Django version: `docs/FROM_DJANGO.md`
+## Deployment
 
-Quick start on Hostinger: import `database/schema.sql` > create a Node.js app (entry file `server.js`, Node 22) > add the environment variables > NPM install > Start > open `/admin/setup/`.
+- Hostinger deployment instructions: [docs/HOSTINGER_DEPLOY.md](docs/HOSTINGER_DEPLOY.md)
+- Owner's manual: [docs/ADMIN_GUIDE.md](docs/ADMIN_GUIDE.md)
+- Developer setup: [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)
+- Environment-variable template: [.env.example](.env.example)
+- Database schema: [database/schema.sql](database/schema.sql)
+- Legacy migration notes: [docs/FROM_DJANGO.md](docs/FROM_DJANGO.md)
 
-What is inside: public pages (home, services, packages, portfolio, videos, testimonials, blog, FAQ, about, contact, privacy, terms), `sitemap.xml`, `robots.txt`, `healthz`, JSON-LD schema, AVIF/WebP images, HTMX filters and "load more", whole-page cache, spam-protected enquiry form, and an admin for everything (services, event types, projects, photos with bulk upload, videos, articles, testimonials, FAQs, enquiries, site settings, admin users).
+## Hostinger preflight
+
+Before going live, verify that `views/` contains all Nunjucks page and admin templates. The runtime loads templates from this directory. The tracked repository bundle must also contain `dist/main.js`, `src/generated/prisma/`, `public/static/`, `server.js`, and `database/schema.sql`.
+
+Run the preflight with the required environment variables present:
+
+```bash
+npm run healthcheck
+```
+
+It checks required deployment paths and environment variable presence without printing secret values. It does not verify live database credentials; use `/healthz/` after starting the app for that.
+
+## Quick start
+
+1. Create/import the database from `database/schema.sql`.
+2. Create a Hostinger Node.js app using Node 22 and startup file `server.js`.
+3. Add private environment variables from `.env.example` in hPanel.
+4. Install dependencies and start/restart the app.
+5. Verify `/healthz/`, the home page, admin and enquiry flow before publishing.
+
+**Current deployment blocker:** confirm and restore the missing `views/` templates in the Git repository before considering the build production-ready. A successful process start alone is not proof that pages render correctly.

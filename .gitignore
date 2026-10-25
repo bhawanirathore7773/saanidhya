@@ -3,5 +3,5 @@ node_modules/
 storage/
 *.log
 .DS_Store
-# dist/ is shipped pre-built for hosting. Remove the next line from .gitignore only if you build on the server.
-# dist/
+# dist/ is intentionally shipped pre-built for shared hosting.
+# Generated Prisma client, runtime templates, and public assets are required at runtime.
