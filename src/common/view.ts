@@ -110,7 +110,7 @@ class ViewLoader extends nunjucks.FileSystemLoader {
 
 export function createViewEnv(): nunjucks.Environment {
   const env = new nunjucks.Environment(
-    new ViewLoader(config.viewsDir, { noCache: !config.production }),
+    new ViewLoader(config.viewsDir, { noCache: !config.production, throwOnUndefined: false }),
     { autoescape: true, throwOnUndefined: false },
   );
 
