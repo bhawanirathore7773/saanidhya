@@ -1,0 +1,358 @@
+{
+ "categories": [
+  {
+   "name": "Wedding",
+   "short_description": "Complete wedding decoration: mandap, stage, entrance, seating and lighting, designed around your families and venue.",
+   "ordering": 10
+  },
+  {
+   "name": "Engagement",
+   "short_description": "Elegant ring ceremony and engagement setups with a warm, photo-friendly stage and backdrop.",
+   "ordering": 20
+  },
+  {
+   "name": "Haldi, Mehndi & Sangeet",
+   "short_description": "Colourful, joyful decor for your pre-wedding functions, from marigold haldi corners to sangeet stages.",
+   "ordering": 30
+  },
+  {
+   "name": "Anniversary",
+   "short_description": "Romantic anniversary decoration at home, a hall or a restaurant, personal and beautifully lit.",
+   "ordering": 40
+  },
+  {
+   "name": "Birthday",
+   "short_description": "Birthday decoration for kids and adults: balloons, themes, backdrops and table setups, at home or at a venue.",
+   "ordering": 50
+  },
+  {
+   "name": "Baby Shower",
+   "short_description": "Soft, cheerful baby shower and godh bharai decoration with themes that suit the mother-to-be.",
+   "ordering": 60
+  },
+  {
+   "name": "Surprise & Love Setups",
+   "short_description": "Private proposal, surprise and candle-light setups planned around your story and kept a secret until the big moment.",
+   "ordering": 70
+  },
+  {
+   "name": "Corporate Events",
+   "short_description": "Stage, branding and decor for launches, annual days, conferences and office celebrations.",
+   "ordering": 80
+  }
+ ],
+ "services": [
+  {
+   "title": "Wedding Decoration in {city}",
+   "category": "Wedding",
+   "short": "Wedding decoration in {city}: mandap, stage, entry gate and seating, planned around your venue, families and budget.",
+   "paragraphs": [
+    "Your wedding is a once-in-a-lifetime day, and the decor sets the mood for every photograph and every memory. We plan the full look together: mandap, stage, entrance, pathway, seating and lighting, so everything feels like one beautiful story.",
+    "After a short chat about your venue, guest count and colours, we share a clear plan and quote. On the day, our team arrives early, sets up carefully and stays on hand for any last-minute change, so your family can focus on the rituals."
+   ],
+   "highlights": [
+    "Mandap, stage and entrance decor",
+    "Fresh and artificial flower options",
+    "Lighting and photo corners",
+    "Set up before your guests arrive"
+   ],
+   "keyword": "wedding decorator in {city}",
+   "featured": true
+  },
+  {
+   "title": "Mandap & Stage Decoration in {city}",
+   "category": "Wedding",
+   "short": "Mandap and stage decoration in {city}, from traditional floral looks to modern minimal designs, made to suit your venue.",
+   "paragraphs": [
+    "The mandap and stage are the heart of the wedding, so we design them with care. Choose a traditional floral mandap, a royal fabric look or a clean, modern design, and we adapt the size and details to your venue and budget.",
+    "We think about how the stage looks in photographs and in person, how the families will sit, and how easily the couple can move. Lighting and backdrop are planned together so the stage looks warm from every angle."
+   ],
+   "highlights": [
+    "Traditional, royal and modern styles",
+    "Backdrop, flooring and seating",
+    "Designed for photos and videos",
+    "Custom colour themes"
+   ],
+   "keyword": "mandap decoration in {city}",
+   "featured": true
+  },
+  {
+   "title": "Floral Decoration in {city}",
+   "category": "Wedding",
+   "short": "Floral decoration in {city} for weddings and functions: marigold, rose and seasonal flowers arranged with care.",
+   "paragraphs": [
+    "Flowers bring warmth and fragrance to any celebration. We work with marigold, rose, tuberose and seasonal flowers, and can combine real flowers with high-quality artificial ones to suit your budget and the season.",
+    "From entrance arches and pathways to table centrepieces and stage garlands, we plan quantities and colours in advance so the flowers look fresh when your guests walk in."
+   ],
+   "highlights": [
+    "Marigold, rose and seasonal flowers",
+    "Entrance arches and pathways",
+    "Centrepieces and garlands",
+    "Real and artificial mix to fit your budget"
+   ],
+   "keyword": "floral decoration in {city}",
+   "featured": false
+  },
+  {
+   "title": "Engagement & Ring Ceremony Decoration in {city}",
+   "category": "Engagement",
+   "short": "Engagement and ring ceremony decoration in {city}: a graceful stage, backdrop and ring-exchange setup for your special moment.",
+   "paragraphs": [
+    "An engagement is the first big celebration of a new journey. We create a graceful stage and backdrop where the ring exchange looks beautiful in every photo, with soft lighting and a welcoming entrance for your guests.",
+    "Whether you are planning at home, in a banquet hall or in a garden, we design the setup to match the size of the gathering and the style you have in mind."
+   ],
+   "highlights": [
+    "Ring-exchange stage and backdrop",
+    "Entrance and photo corner",
+    "Soft, flattering lighting",
+    "Home, hall or garden venues"
+   ],
+   "keyword": "engagement decoration in {city}",
+   "featured": false
+  },
+  {
+   "title": "Haldi & Mehndi Decoration in {city}",
+   "category": "Haldi, Mehndi & Sangeet",
+   "short": "Haldi and mehndi decoration in {city}: bright marigold corners, swings, props and cosy seating for joyful functions.",
+   "paragraphs": [
+    "Haldi and mehndi are full of colour, music and laughter, and the decor should feel the same. We create marigold backdrops, floral swings, brass urli and diya corners, and comfortable low seating that guests enjoy sitting in.",
+    "Because these functions often happen in daylight or open spaces, we plan the layout for photographs, easy movement and the mess of haldi, so the setup stays lovely from start to finish."
+   ],
+   "highlights": [
+    "Marigold and floral backdrops",
+    "Swings, props and seating",
+    "Photo-friendly layouts",
+    "Plans for outdoor and daytime functions"
+   ],
+   "keyword": "haldi decoration in {city}",
+   "featured": true
+  },
+  {
+   "title": "Sangeet Night Decoration in {city}",
+   "category": "Haldi, Mehndi & Sangeet",
+   "short": "Sangeet night decoration in {city}: a stage, lighting and dance-floor setup that lets the families perform and celebrate.",
+   "paragraphs": [
+    "The sangeet is where families dance, perform and celebrate together. We design a stage that works for performances, with a striking backdrop, warm lighting and a clear dance area so everyone can enjoy the night.",
+    "We coordinate with your DJ, sound and lighting partners on request, so the decor and the entertainment work together rather than getting in each other's way."
+   ],
+   "highlights": [
+    "Performance stage and backdrop",
+    "Lighting and dance-floor layout",
+    "Seating for elders and guests",
+    "Coordination with DJ and sound on request"
+   ],
+   "keyword": "sangeet decoration in {city}",
+   "featured": false
+  },
+  {
+   "title": "Anniversary Decoration in {city}",
+   "category": "Anniversary",
+   "short": "Anniversary decoration in {city} at home, a hall or a restaurant: romantic, personal and beautifully lit.",
+   "paragraphs": [
+    "An anniversary is about the two of you, so the decor should feel personal. Tell us your story, favourite colours and the mood you want, and we design a setup that feels romantic and comfortable, whether for two people or a family gathering.",
+    "We can set up at your home, a banquet hall or a restaurant, and we time everything so the space is ready and the surprise stays a surprise."
+   ],
+   "highlights": [
+    "At home, hall or restaurant",
+    "Balloons, flowers and candle-light",
+    "Personal touches: photos, names, dates",
+    "Set up while you are away"
+   ],
+   "keyword": "anniversary decoration in {city}",
+   "featured": true
+  },
+  {
+   "title": "Birthday Decoration at Home in {city}",
+   "category": "Birthday",
+   "short": "Birthday decoration at home in {city}: balloon themes, backdrops and table setups for kids and adults, ready before guests arrive.",
+   "paragraphs": [
+    "A great birthday setup does not need a big hall. We come to your home and turn a room, terrace or lawn into a party space with a themed backdrop, balloons, a cake table and small details that make the birthday person feel special.",
+    "Pick a theme from cartoon characters and jungle to royal, boho or simple elegant colours, or tell us your own idea. We plan the setup for your space and budget and keep it ready before the guests arrive."
+   ],
+   "highlights": [
+    "Themed backdrop and balloons",
+    "Cake table and photo corner",
+    "Kids and adult birthdays",
+    "Setup at home, terrace or hall"
+   ],
+   "keyword": "birthday decoration at home in {city}",
+   "featured": true
+  },
+  {
+   "title": "Balloon Decoration in {city}",
+   "category": "Birthday",
+   "short": "Balloon decoration in {city} for birthdays, baby showers and parties: garlands, arches, columns and themed backdrops.",
+   "paragraphs": [
+    "Balloons are the quickest way to make a space feel like a celebration. We make balloon garlands, arches, columns, bouquets and full backdrops in your chosen colours, with clean finishing that looks good in photographs.",
+    "Our balloon work suits birthdays, baby showers, welcome-home surprises and small office parties, and can be combined with flowers, lights and props."
+   ],
+   "highlights": [
+    "Garlands, arches and columns",
+    "Custom colour combinations",
+    "Backdrops and photo corners",
+    "Good for small budgets"
+   ],
+   "keyword": "balloon decoration in {city}",
+   "featured": false
+  },
+  {
+   "title": "Baby Shower Decoration in {city}",
+   "category": "Baby Shower",
+   "short": "Baby shower and godh bharai decoration in {city}: soft themes, pastel colours and a comfortable seat for the mother-to-be.",
+   "paragraphs": [
+    "A baby shower should feel gentle, happy and comfortable. We create soft themes in pastel or traditional colours, with a lovely seat for the mother-to-be, a photo backdrop and a table for gifts and treats.",
+    "For godh bharai we can include traditional elements such as flowers, brass and rangoli, and we plan the layout so elders and guests can move around easily."
+   ],
+   "highlights": [
+    "Pastel and traditional themes",
+    "Comfortable seat and backdrop",
+    "Table and gift corner",
+    "Godh bharai ready"
+   ],
+   "keyword": "baby shower decoration in {city}",
+   "featured": false
+  },
+  {
+   "title": "Love & Surprise Setups in {city}",
+   "category": "Surprise & Love Setups",
+   "short": "Surprise and love setups in {city}: proposal, candle-light and room decoration planned in secret and set up on time.",
+   "paragraphs": [
+    "A surprise works only when every detail is right and nobody spoils it. We plan proposals, candle-light dinners and romantic room setups around your partner's tastes, with petals, candles, lights and messages placed just how you imagined.",
+    "We agree on timing and privacy with you in advance, set up quietly while your partner is away, and keep the entire plan confidential."
+   ],
+   "highlights": [
+    "Proposal and candle-light setups",
+    "Room and rooftop decoration",
+    "Flowers, lights and message boards",
+    "Private, confidential planning"
+   ],
+   "keyword": "surprise decoration in {city}",
+   "featured": true
+  },
+  {
+   "title": "Corporate Event Management in {city}",
+   "category": "Corporate Events",
+   "short": "Corporate event management and decoration in {city}: stage, branding, seating and on-ground coordination for smooth events.",
+   "paragraphs": [
+    "A corporate event should look professional and run on time. We handle stage design, backdrops with your branding, entrance decor, seating and on-ground coordination for product launches, annual days, conferences and celebrations.",
+    "Share your agenda and brand guidelines, and we plan the layout, timeline and setup so your team and guests can focus on the event itself."
+   ],
+   "highlights": [
+    "Stage and branded backdrops",
+    "Entrance, registration and seating",
+    "On-ground coordination",
+    "Launches, annual days and conferences"
+   ],
+   "keyword": "event management company in {city}",
+   "featured": false
+  }
+ ],
+ "faqs": [
+  {
+   "question": "How early should I book my decorator?",
+   "answer": "For weddings, booking two to three months ahead is comfortable, and earlier for popular dates in the wedding season. For birthdays and anniversaries, a week is usually enough. If your date is close, message us anyway and we will tell you honestly if we can take it.",
+   "show_on_home": true
+  },
+  {
+   "question": "How much does decoration cost in {city}?",
+   "answer": "It depends on the event, venue size, guest count, flowers and lighting. A small birthday setup and a full wedding are very different. Share your date, venue and budget on WhatsApp and we will send a clear written quote. You can also see starting prices on our packages.",
+   "show_on_home": true
+  },
+  {
+   "question": "Do you decorate at home, or only at venues?",
+   "answer": "Both. We decorate at homes, terraces, banquet halls, hotels, farmhouses and gardens. Birthday and anniversary setups at home are among our most common requests.",
+   "show_on_home": true
+  },
+  {
+   "question": "Can I see photos or videos of your earlier work?",
+   "answer": "Yes. Please look at our Portfolio and Videos pages. If you like a particular look, send us a reference photo and we will tell you how we can create it for your venue and budget.",
+   "show_on_home": true
+  },
+  {
+   "question": "Can you copy a theme I saw on Instagram or Pinterest?",
+   "answer": "We can recreate the feel of it and adapt it to your space and budget. Some exact materials may not be available, so we suggest close alternatives and always show you the plan before we start.",
+   "show_on_home": true
+  },
+  {
+   "question": "Do you use real flowers or artificial flowers?",
+   "answer": "We use both. Real flowers look and smell wonderful but cost more and last one day. Good artificial flowers work well for large backdrops and tight budgets. We usually mix the two and tell you which makes sense for each part of the setup.",
+   "show_on_home": true
+  },
+  {
+   "question": "Do you handle the whole event, or only decoration?",
+   "answer": "Either. You can hire us for decoration only, or for planning and coordination as well. We can also connect you with trusted partners for sound, DJ, photography or catering if you want them, quoted separately.",
+   "show_on_home": true
+  },
+  {
+   "question": "How do I get a quote?",
+   "answer": "Message or call us with your event type, date, venue, approximate guests and budget, or use the enquiry form. We reply with ideas and a written quote. For larger events we suggest a venue visit so the plan fits the space.",
+   "show_on_home": true
+  },
+  {
+   "question": "Do you work outside {city}?",
+   "answer": "Yes, on request. Tell us the location and dates. Travel and stay for the team are quoted separately and clearly, before you decide.",
+   "show_on_home": false
+  },
+  {
+   "question": "How does booking and payment work?",
+   "answer": "Once you approve the quote, a booking amount confirms your date, and the balance follows the schedule written in the quote. Everything is in writing, so there are no surprises later.",
+   "show_on_home": false
+  },
+  {
+   "question": "What if the plan or the weather changes?",
+   "answer": "We discuss a backup during planning, such as a covered area or an indoor layout for outdoor events. If something changes closer to the date, we tell you openly how it affects the cost and time.",
+   "show_on_home": false
+  },
+  {
+   "question": "How long does the setup take?",
+   "answer": "A home birthday setup usually takes one to two hours. A wedding stage or mandap can take several hours or start the evening before. We agree the timings with you and the venue in advance so everything is ready before your guests arrive.",
+   "show_on_home": false
+  },
+  {
+   "question": "Can you work with a small budget?",
+   "answer": "Yes. Tell us your budget honestly and we will design the best possible setup within it, and suggest where to spend and where to save. Balloon and backdrop setups are a good option for smaller budgets.",
+   "show_on_home": false
+  },
+  {
+   "question": "Do you do surprise and proposal setups?",
+   "answer": "Yes. We plan proposals, anniversary surprises and candle-light setups in confidence, agree the timing and privacy with you, and set everything up before your partner arrives.",
+   "show_on_home": false
+  },
+  {
+   "question": "Do you decorate corporate events?",
+   "answer": "Yes. We handle stage design, branded backdrops, entrance decor and coordination for product launches, annual days, conferences and office celebrations.",
+   "show_on_home": false
+  },
+  {
+   "question": "Will someone visit the venue before the event?",
+   "answer": "For weddings and larger events we recommend a venue visit so we can measure the space, check power and access, and plan the layout properly. For small home setups, photos and a quick call are usually enough.",
+   "show_on_home": false
+  }
+ ],
+ "articles": [
+  {
+   "title": "Haldi Decoration Ideas at Home: Simple, Bright and Photo-Friendly",
+   "seo_title": "Haldi Decoration Ideas at Home: Simple & Photo-Friendly",
+   "excerpt": "Planning a haldi at home? These simple decoration ideas, from marigold backdrops to cosy seating and photo corners, help you create a bright, joyful setup without a big hall or a big budget.",
+   "seo_description": "Simple haldi decoration ideas for your home, terrace or courtyard: backdrops, swings, seating, props, a clean-up plan and a day-before checklist.",
+   "focus_keyword": "haldi decoration ideas at home",
+   "intent": "informational",
+   "category": "Haldi, Mehndi & Sangeet",
+   "service_prefix": "haldi-mehndi-decoration",
+   "days_ago": 14,
+   "body": "\n<p>Haldi is the most playful function of an Indian wedding. There is laughter, music, yellow everywhere and a lot of photographs. The good news is that you do not need a big hall to make it beautiful. A terrace, a courtyard or even a living room can look wonderful with a few well-chosen ideas. Here is a simple guide to planning your haldi decoration at home.</p>\n\n<h2>Start with the space and the time of day</h2>\n<p>Before you think about flowers, look at where the function will happen. Walk around the space and note where guests will sit, where the couple will sit, where the haldi will be applied, and where the power points are. A rough sketch on paper is enough.</p>\n<p>Think about the time of day too. A morning haldi in soft daylight makes bright colours glow, while an evening haldi needs warm lights. Open spaces such as terraces and lawns are easy to decorate and great for photos, but check the weather and arrange some shade if the sun is strong.</p>\n\n<h2>Choose a simple colour story</h2>\n<p>Yellow and marigold orange are the classic haldi colours. Add one or two supporting colours: white for freshness, green leaves for contrast, or a little pink for a festive feel. Too many colours look busy in photographs, so three is a good limit. Ask close family to wear yellow, white or soft pastels so the outfits and the setup match.</p>\n\n<h2>Six haldi decoration ideas that work well at home</h2>\n<h3>1. A marigold backdrop</h3>\n<p>Strings of marigold (genda) hung on a wall or a simple frame, with a few roses mixed in, look rich and cost far less than a big stage. Fresh marigold wilts in heat, so hang it close to the function time, or mix fresh flowers with good-quality artificial garlands.</p>\n<h3>2. A floral swing (jhula)</h3>\n<p>A flower-covered swing is always a favourite photo spot. Hang it from a strong support, check the weight it can carry, and keep it away from the area where haldi will be thrown or applied.</p>\n<h3>3. A brass urli and diya corner</h3>\n<p>A wide brass urli filled with water, floating petals and a few diyas gives a calm, traditional corner. Keep open flames away from fabric and flowers, and never leave them unattended.</p>\n<h3>4. Low seating with cushions</h3>\n<p>Cotton mats, bolsters and cushions in yellow and white make the space warm and relaxed. Keep a few regular chairs for elders so everyone is comfortable.</p>\n<h3>5. A haldi station</h3>\n<p>A small low table with a thali of haldi paste, mango leaves, fresh petals and small bowls keeps the ritual neat and looks lovely in pictures. Put a washable cloth underneath.</p>\n<h3>6. A welcoming entrance</h3>\n<p>A small flower arch, a rangoli and a name board with the couple's names tell guests they have arrived at something special.</p>\n\n<h2>Props and details that look good in photos</h2>\n<ul>\n<li>Hanging chhatris (umbrellas), paper fans or pom-poms in yellow and white</li>\n<li>Lanterns or fairy lights for evening functions</li>\n<li>Bright dupattas used as drapes behind the seating</li>\n<li>A neat name sign in Hindi or English</li>\n</ul>\n<p>Keep the background simple so that people stand out, and avoid shiny or reflective surfaces right behind the couple. Take a few test photos with your phone at the same time of day to see how the colours look.</p>\n\n<h2>Plan for the mess</h2>\n<p>Haldi stains, and that is part of the fun, but a little planning saves a lot of cleaning. Lay a washable cotton sheet or a plastic sheet under a pretty cloth. Protect marble and light stone floors, as haldi can stain them. Keep wet wipes, towels, a bucket of water and a change of clothes for the couple ready. If possible, create a separate \"haldi zone\" away from the main seating and decoration.</p>\n\n<h2>A simple checklist for the day before</h2>\n<ol>\n<li>Confirm the date, time and who is in charge on the day.</li>\n<li>Confirm flower orders and the delivery time.</li>\n<li>Test lights, speakers and extension boards.</li>\n<li>Set up seating, sheets and the haldi station.</li>\n<li>Keep the haldi paste, wipes, towels and a first-aid kit handy.</li>\n<li>Choose one family member as the point person for any last-minute questions.</li>\n</ol>\n\n<h2>How to plan the budget without stress</h2>\n<p>Decide how much you are comfortable spending before you choose a theme. Then pick one \"hero\" element, such as the backdrop or the swing, and keep the rest simple. Real flowers look and smell wonderful but cost more and last only a day. A sensible mix of real flowers where they show most and good artificial pieces elsewhere keeps the look rich and the cost reasonable. Whoever you work with, ask for a written list of what is included.</p>\n\n<h2>When to ask a decorator for help</h2>\n<p>If you are managing several functions, the venue is far from home, or you simply want the setup ready on time so your family can relax, a decorator can plan, source and set everything up. {business} plans haldi setups at homes, terraces and halls in {city}. See our <a href=\"{service_url}\">haldi and mehndi decoration</a> service, browse <a href=\"{gallery_url}\">our gallery</a> for ideas, or <a href=\"{contact_url}\">ask for a free quote</a>.</p>\n"
+  },
+  {
+   "title": "Wedding Decoration Cost in {city}: What Decides the Price and How to Plan Your Budget",
+   "seo_title": "Wedding Decoration Cost in {city}: What Decides the Price",
+   "excerpt": "There is no single price for wedding decoration. Here are the seven things that decide the cost, how to set a sensible budget, what a good written quote should include, and questions to ask any decorator.",
+   "seo_description": "What decides wedding decoration cost in {city}? Seven factors, how to set your budget, a quote checklist and questions to ask a decorator.",
+   "focus_keyword": "wedding decoration cost in {city}",
+   "intent": "commercial",
+   "category": "Wedding",
+   "service_prefix": "wedding-decoration",
+   "days_ago": 3,
+   "body": "\n<p>\"How much will wedding decoration cost?\" is the first question most families ask, and the honest answer is: it depends. Two weddings with the same number of guests can have very different decoration costs. This guide explains what decides the price, so you can plan with confidence and compare quotes fairly. We have not listed fixed prices here, because any number given without knowing your venue, guest count and design would only be a guess. Do not worry, though: budget ki tension becomes much smaller once you know what to ask.</p>\n\n<h2>Why there is no single price</h2>\n<p>Decoration is custom work. The cost depends on materials, labour, transport and time. A simple stage with fabric and lights is a very different job from a full floral mandap with an entrance, pathways and seating. Prices also move with the season and with the cost of flowers on the day.</p>\n\n<h2>The seven things that decide your price</h2>\n<h3>1. Venue size and layout</h3>\n<p>A large lawn or hall needs more decoration to look full. High ceilings need more material and equipment. Outdoor venues may need extra planning for weather cover.</p>\n<h3>2. Number of guests and functions</h3>\n<p>More guests usually mean more seating and table decoration. Every function, whether haldi, mehndi, sangeet, wedding or reception, is a separate setup.</p>\n<h3>3. Which areas get decorated</h3>\n<p>The stage or mandap, entrance, pathway, seating area, dining area, photo corners and even the car can all be part of the plan. The more areas, the higher the cost.</p>\n<h3>4. Flowers and materials</h3>\n<p>Fresh flowers, artificial flowers and fabric are priced very differently, and fresh flowers vary with the season and availability. A good decorator will suggest the right mix for your budget.</p>\n<h3>5. Lighting</h3>\n<p>Basic lighting, fairy lights, chandeliers and special uplighting can change the look of a space completely, and they are priced accordingly.</p>\n<h3>6. Custom design and props</h3>\n<p>A custom backdrop, signage, themed props or a one-of-a-kind design takes more time and materials than a standard setup.</p>\n<h3>7. Date, timing and distance</h3>\n<p>Popular wedding dates are in high demand. Very early or late setups, extra dismantling time, and events outside the city (with travel and stay for the team) all affect the quote.</p>\n\n<h2>How to set a decoration budget</h2>\n<ol>\n<li>Decide, as a family, the total amount you are comfortable spending on decoration.</li>\n<li>List your must-haves (for example the stage and the entrance) and your nice-to-haves (extra lighting, a photo corner).</li>\n<li>Spend the most on what guests see first and what appears in most photographs: the stage or mandap and the entrance.</li>\n<li>Keep a small buffer for last-minute changes.</li>\n<li>Tell your decorator your budget honestly, so the design is planned within it from the start.</li>\n</ol>\n\n<h2>What a good written quote should include</h2>\n<ul>\n<li>Your date, venue and the functions covered</li>\n<li>A list of each area to be decorated and what is included in it</li>\n<li>The materials: fresh flowers, artificial flowers, fabric and lighting</li>\n<li>Setup and dismantling timings</li>\n<li>Who arranges power, permissions and venue access</li>\n<li>The payment schedule, and what happens if plans change</li>\n<li>Anything that is not included, and a contact person for the day</li>\n</ul>\n\n<h2>Ways to save without making it look cheap</h2>\n<ul>\n<li>Choose one hero element, such as the mandap or the entrance, and keep the rest simple but neat.</li>\n<li>Use fresh flowers where they show the most and good-quality artificial pieces elsewhere.</li>\n<li>Invest in lighting and fabric. They make a big difference for a modest cost.</li>\n<li>Ask whether decoration from one function can be reused at another, if your decorator agrees.</li>\n<li>Decide the design early, so there are fewer rushed changes.</li>\n</ul>\n\n<h2>Questions to ask any decorator</h2>\n<ul>\n<li>Can I see photos or videos of similar work?</li>\n<li>Who will be present on the day, and who is my point of contact?</li>\n<li>What happens if a particular flower is not available?</li>\n<li>How early will the setup be finished before the guests arrive?</li>\n<li>What happens if the date, venue or plan changes?</li>\n</ul>\n\n<h2>Warning signs to watch for</h2>\n<ul>\n<li>A one-line quote with no details of what is included</li>\n<li>No venue visit or photos for a large event</li>\n<li>No written terms or payment schedule</li>\n<li>Pressure to pay quickly before you have understood the quote</li>\n<li>A price far below every other quote, with no clear reason</li>\n</ul>\n\n<h2>How we quote at {business}</h2>\n<p>We ask for your date, venue, approximate guest count and budget. Then we share ideas and a clear written quote that lists exactly what is included. For larger events we suggest visiting the venue together. See our <a href=\"{service_url}\">wedding decoration service</a> in {city}, look at <a href=\"{gallery_url}\">our gallery</a>, or <a href=\"{contact_url}\">ask for a free quote</a>.</p>\n"
+  }
+ ]
+}

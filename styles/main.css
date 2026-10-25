@@ -1,0 +1,166 @@
+/*
+ * Saanidhya design system (source). Built twice by scripts/tailwind.py:
+ *   critical.css  - only what the header/hero/mobile bar use (inlined in <head>)
+ *   site.css      - everything, loaded without blocking the first paint
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ base */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem; /* sticky header height, so #anchors are not hidden */
+  }
+  body {
+    @apply bg-cream font-sans text-[1.0625rem] leading-relaxed text-ink-soft antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif font-semibold text-maroon-800;
+  }
+  a {
+    @apply text-maroon-700;
+  }
+  img, svg, video {
+    @apply block max-w-full;
+  }
+  :focus-visible {
+    outline: 3px solid theme("colors.maroon.600");
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .on-dark :focus-visible {
+    outline-color: theme("colors.gold.300");
+  }
+  [x-cloak] {
+    display: none !important;
+  }
+  /* hidden form fields (security tokens, campaign tags) must never take up a grid cell */
+  input[type="hidden"] {
+    display: none !important;
+  }
+}
+
+/* ------------------------------------------------------------ components */
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section        { @apply py-14 md:py-20; }
+  .section-sand   { @apply bg-sand; }
+  /* Two tinted sections in a row would blur into one block, so the second one goes back to the page colour. */
+  .section-sand + .section-sand { @apply bg-cream; }
+  .section-dark   { @apply bg-maroon-800 text-maroon-100; }
+  .section-dark h1, .section-dark h2, .section-dark h3 { @apply text-white; }
+
+  /* headings */
+  .eyebrow    { @apply mb-3 inline-block text-sm font-semibold uppercase tracking-[0.18em] text-gold-600; }
+  .section-dark .eyebrow { @apply text-gold-300; }
+  .h-display  { @apply font-serif text-display font-semibold text-maroon-800; }
+  .h-page     { @apply font-serif text-h1 font-semibold text-maroon-800; }
+  .h-section  { @apply font-serif text-h2 font-semibold text-maroon-800; }
+  .h-card     { @apply font-serif text-h3 font-semibold text-maroon-800; }
+  .lead       { @apply text-lead text-ink-soft; }
+
+  /* decorative divider: line - diamond - line */
+  .ornament { @apply flex items-center justify-center gap-3 text-gold-500; }
+  .ornament::before, .ornament::after {
+    content: ""; @apply h-px w-14 sm:w-20;
+    background: linear-gradient(90deg, transparent, theme("colors.gold.400"));
+  }
+  .ornament::after { background: linear-gradient(270deg, transparent, theme("colors.gold.400")); }
+
+  /* buttons: all >= 44px tall for touch */
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-2.5
+           text-base font-semibold leading-none no-underline transition duration-200 ease-out
+           active:scale-[0.98];
+  }
+  .btn-primary { @apply bg-maroon-700 text-white shadow-card hover:bg-maroon-800; }
+  .btn-gold    { @apply bg-gold-400 text-ink shadow-card hover:bg-gold-300; }
+  .btn-outline { @apply border-2 border-maroon-700 text-maroon-700 hover:bg-maroon-700 hover:text-white; }
+  .btn-light   { @apply border-2 border-white text-white hover:bg-white hover:text-maroon-800; }
+  .btn-wa      { @apply bg-wa text-white shadow-card hover:bg-wa-dark; }
+  .btn-sm      { @apply min-h-[44px] px-5 text-[0.9375rem]; }
+  .btn-lg      { @apply min-h-[56px] px-8 text-lg; }
+
+  /* filter chips (gallery) */
+  .chip        { @apply inline-flex min-h-[44px] items-center rounded-full border border-maroon-200 bg-white px-4 text-[15px] font-semibold text-maroon-700 no-underline hover:bg-maroon-50; }
+  .chip-active { @apply border-maroon-700 bg-maroon-700 text-white hover:bg-maroon-800; }
+  /* htmx adds .htmx-request to an element while its request is running */
+  .htmx-request { @apply pointer-events-none opacity-60; }
+
+  /* cards + badges */
+  .card       { @apply overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-maroon-100/70 transition duration-300; }
+  .card-hover { @apply hover:-translate-y-1 hover:shadow-lift; }
+  .badge      { @apply inline-flex items-center gap-1.5 rounded-full bg-blush px-3 py-1 text-sm font-semibold text-maroon-700; }
+
+  /* SVG icons from the inline sprite (templates/includes/icons.html) */
+  .icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* forms (enquiry form, Step 6). Borders are >= 3:1 against white (WCAG 1.4.11). */
+  .label { @apply mb-1.5 block text-sm font-semibold text-ink; }
+  .input, .select, .textarea {
+    @apply block min-h-[48px] w-full rounded-xl border border-ink-faint/70 bg-white px-4 py-2.5
+           text-base text-ink placeholder:text-ink-faint
+           focus:border-maroon-600 focus:outline-none focus:ring-2 focus:ring-maroon-600/30;
+  }
+  .textarea { @apply min-h-[110px]; }
+  .field-error { @apply mt-1.5 flex items-start gap-1.5 text-sm font-semibold text-maroon-700; }
+  .field-hint  { @apply mt-1.5 text-sm text-ink-faint; }
+
+  /* skip link, visible on keyboard focus only */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]
+           focus:rounded-full focus:bg-maroon-700 focus:px-5 focus:py-3 focus:font-semibold focus:text-white;
+  }
+}
+
+@layer utilities {
+  /* Skip rendering work for below-the-fold sections until they are near the screen. */
+  .cv-auto { content-visibility: auto; contain-intrinsic-size: auto 640px; }
+  /* Subtle warm texture for section backgrounds (no image request). */
+  .bg-dots {
+    background-image: radial-gradient(theme("colors.gold.300") 1px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+}
+
+/* --------------------------------------------- light, CSS-only animations */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+/* Scroll-driven reveal only where the browser supports it; elsewhere content is simply visible. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-timeline: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* -------------------------------------------- non-blocking CSS loading guard
+ * The full stylesheet loads after first paint. Until it arrives (JS on, .css-ready
+ * not yet set) the parts below the first screen stay invisible instead of flashing
+ * unstyled. The loader in base.html always sets .css-ready (load, error or 3 s timeout).
+ */
+.js:not(.css-ready) main > :not(:first-child),
+.js:not(.css-ready) #site-footer {
+  visibility: hidden;
+}
+
+/* footer (dark background) */
+@layer components {
+  .footer-link   { @apply text-maroon-100 no-underline hover:text-white hover:underline; }
+  .footer-social { @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-gold-400 hover:text-ink; }
+}

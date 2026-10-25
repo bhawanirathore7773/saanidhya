@@ -1,0 +1,7 @@
+node_modules/
+.env
+storage/
+*.log
+.DS_Store
+# dist/ is shipped pre-built for hosting. Remove the next line from .gitignore only if you build on the server.
+# dist/
